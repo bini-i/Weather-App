@@ -26,7 +26,7 @@ This project uses Javascript to fetch weather data from openweathermap api and r
 
 ## Live Demo
 
-[Live Demo Link](https://www.binyamhailemeskel.me/RestaurantPage/)
+[Live Demo Link](https://www.binyamhailemeskel.me/Weather-App/)
 
 
 ## Authors
