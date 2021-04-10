@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --mode=production",
+    "watch": "webpack --progress --watch",
+    "serve": "webpack-dev-server --open"  
   },
   "repository": {
     "type": "git",
@@ -19,13 +22,9 @@
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "eslint": "^7.23.0",
-    "webpack": "^5.25.0",
-    "webpack-cli": "^4.5.0"
-  },
-  "dependencies": {
-    "babel-eslint": "^10.1.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-markdown": "^2.0.0",
@@ -33,6 +32,9 @@
     "stylelint-config-recommended": "^4.0.0",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.19.0"
+    "stylelint-scss": "^3.19.0",
+    "webpack": "^5.25.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
