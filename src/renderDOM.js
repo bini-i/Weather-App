@@ -2,9 +2,9 @@ import domNodeCreator from './domNodeCreator';
 
 const result = document.getElementById('result');
 
-function renderResult({
+export const renderResult = ({
   temp, location, icon, weatherDesc, unit,
-}) {
+}) => {
   result.innerHTML = '';
   const imgSrc = `http://openweathermap.org/img/wn/${icon}@4x.png`;
   const locationResultEle = domNodeCreator('p', { class: 'location' }, location.toUpperCase());
@@ -17,6 +17,11 @@ function renderResult({
   result.appendChild(weatherDescEle);
   tempResultEle.appendChild(unitEle);
   result.appendChild(tempResultEle);
-}
+};
 
-export default renderResult;
+export const renderError = () => {
+  result.innerHTML = '';
+  result.innerHTML = `
+    <div class='invalid-feedback'> Please enter correct city </div>
+  `;
+};

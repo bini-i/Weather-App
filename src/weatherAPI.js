@@ -7,7 +7,12 @@ const weatherAPI = (() => {
     return new Promise((resolve, reject) => {
       const url = constructURL(location, unit);
       fetch(url, { mode: 'cors' })
-        .then((response) => response.json())
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Please provide the correct city');
+          }
+          return response.json();
+        })
         .then((data) => {
           const { temp } = data.main;
           const { icon } = data.weather[0];
@@ -15,6 +20,9 @@ const weatherAPI = (() => {
           resolve({
             temp, location, icon, weatherDesc, unit,
           });
+        })
+        .catch((error) => {
+          reject(error);
         });
     });
   }
