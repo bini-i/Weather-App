@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Weather App</title>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <section class="banner">
+        <div class="content">
+            <div id="result"></div>
+            <div class="filter">
+                <input list="cities" name="browser" id="city" placeholder="location">
+                
+                <div class="select-unit">
+                    <span>°C</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>°F</span>
+                </div>
+                
+                <input type="submit" id="submit" value="show">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
