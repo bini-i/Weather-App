@@ -135,6 +135,8 @@ input:checked + .slider::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  position: relative;
 }
 
 .weather-desc {
@@ -156,6 +158,14 @@ input:checked + .slider::before {
   flex-direction: column;
   align-items: center;
   transition: 0.4s;
+}
+
+.invalid-feedback {
+  margin-top: 0.5rem;
+  font-size: 80%;
+  color: #dc3545;
+  position: absolute;
+  top: 4rem;
 }
 
 #city {
